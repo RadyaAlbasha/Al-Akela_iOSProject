@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>83485259773-evc81lmo00fgmo8clc7gmfkdtlqdjmis.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.83485259773-evc81lmo00fgmo8clc7gmfkdtlqdjmis</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>83485259773-hka2vktqi1df7oj2nr3gvseq4mi1f7vu.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBwNupiK-2Zr44SOixj-FhMkPmUtKM-KNo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>83485259773</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.scr.Alakela</string>
+	<key>PROJECT_ID</key>
+	<string>alakela-d9736</string>
+	<key>STORAGE_BUCKET</key>
+	<string>alakela-d9736.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:83485259773:ios:ba865c9ea1e98b63488b94</string>
+	<key>DATABASE_URL</key>
+	<string>https://alakela-d9736.firebaseio.com</string>
+</dict>
+</plist>
