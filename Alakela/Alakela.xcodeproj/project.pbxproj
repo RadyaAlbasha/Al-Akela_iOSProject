@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7423342E48000BA439 /* UIMethodsClass.swift */; };
+		11362B7723342E5C000BA439 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7623342E5C000BA439 /* CustomColor.swift */; };
+		11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7823342F51000BA439 /* TypeOfFoodTableViewCell.swift */; };
+		11362B7B23343193000BA439 /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7A23343192000BA439 /* UIColor-Extention.swift */; };
+		11362B8023343AEB000BA439 /* TypeOfFoodViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7F23343AEB000BA439 /* TypeOfFoodViewController_Extension.swift */; };
+		11362B8723344193000BA439 /* RestaurantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B8623344193000BA439 /* RestaurantsTableViewCell.swift */; };
+		11362B89233441E7000BA439 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B88233441E7000BA439 /* RestaurantsViewController.swift */; };
+		11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B8A23344221000BA439 /* RestaurantsViewController_Extention.swift */; };
 		113A62AF2334143100401E89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A62AE2334143100401E89 /* AppDelegate.swift */; };
-		113A62B12334143100401E89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A62B02334143100401E89 /* ViewController.swift */; };
+		113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A62B02334143100401E89 /* TypeOfFoodViewController.swift */; };
 		113A62B42334143100401E89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113A62B22334143100401E89 /* Main.storyboard */; };
 		113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 113A62B52334143100401E89 /* Alakela.xcdatamodeld */; };
 		113A62B92334143100401E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113A62B82334143100401E89 /* Assets.xcassets */; };
@@ -18,9 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11362B7423342E48000BA439 /* UIMethodsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMethodsClass.swift; sourceTree = "<group>"; };
+		11362B7623342E5C000BA439 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		11362B7823342F51000BA439 /* TypeOfFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodTableViewCell.swift; sourceTree = "<group>"; };
+		11362B7A23343192000BA439 /* UIColor-Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
+		11362B7F23343AEB000BA439 /* TypeOfFoodViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodViewController_Extension.swift; sourceTree = "<group>"; };
+		11362B8623344193000BA439 /* RestaurantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewCell.swift; sourceTree = "<group>"; };
+		11362B88233441E7000BA439 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		11362B8A23344221000BA439 /* RestaurantsViewController_Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController_Extention.swift; sourceTree = "<group>"; };
 		113A62AB2334143100401E89 /* Alakela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alakela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113A62AE2334143100401E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		113A62B02334143100401E89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		113A62B02334143100401E89 /* TypeOfFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodViewController.swift; sourceTree = "<group>"; };
 		113A62B32334143100401E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		113A62B62334143100401E89 /* Alakela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alakela.xcdatamodel; sourceTree = "<group>"; };
 		113A62B82334143100401E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +60,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11362B7223342A6D000BA439 /* TypeOfFoodScreen */ = {
+			isa = PBXGroup;
+			children = (
+				11362B7D23343A7D000BA439 /* Protocols */,
+				11362B7C23343A5A000BA439 /* View */,
+				11362B7E23343A8F000BA439 /* Presenter */,
+			);
+			path = TypeOfFoodScreen;
+			sourceTree = "<group>";
+		};
+		11362B7323342E1E000BA439 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				11362B7823342F51000BA439 /* TypeOfFoodTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		11362B7C23343A5A000BA439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11362B7323342E1E000BA439 /* CustomCell */,
+				113A62B02334143100401E89 /* TypeOfFoodViewController.swift */,
+				11362B7F23343AEB000BA439 /* TypeOfFoodViewController_Extension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11362B7D23343A7D000BA439 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		11362B7E23343A8F000BA439 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		11362B81233440EB000BA439 /* RestaurantsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				11362B842334411D000BA439 /* Protocols */,
+				11362B8323344110000BA439 /* View */,
+				11362B8223344104000BA439 /* Presenter */,
+			);
+			path = RestaurantsScreen;
+			sourceTree = "<group>";
+		};
+		11362B8223344104000BA439 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		11362B8323344110000BA439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11362B8523344144000BA439 /* CustomCell */,
+				11362B88233441E7000BA439 /* RestaurantsViewController.swift */,
+				11362B8A23344221000BA439 /* RestaurantsViewController_Extention.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11362B842334411D000BA439 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		11362B8523344144000BA439 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				11362B8623344193000BA439 /* RestaurantsTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		113A62A22334143100401E89 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +165,11 @@
 		113A62AD2334143100401E89 /* Alakela */ = {
 			isa = PBXGroup;
 			children = (
+				11EFE244233422C6006EB504 /* Model */,
+				11EFE245233422D8006EB504 /* Services */,
+				11EFE24823342347006EB504 /* Screens */,
+				11EFE2492334237A006EB504 /* Utils */,
 				113A62AE2334143100401E89 /* AppDelegate.swift */,
-				113A62B02334143100401E89 /* ViewController.swift */,
-				113A62B22334143100401E89 /* Main.storyboard */,
 				113A62B82334143100401E89 /* Assets.xcassets */,
 				113A62BA2334143100401E89 /* LaunchScreen.storyboard */,
 				11B1EA89233417AC001B3219 /* GoogleService-Info.plist */,
@@ -75,6 +177,56 @@
 				113A62B52334143100401E89 /* Alakela.xcdatamodeld */,
 			);
 			path = Alakela;
+			sourceTree = "<group>";
+		};
+		11EFE244233422C6006EB504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11EFE245233422D8006EB504 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11EFE24723342310006EB504 /* DataAccess */,
+				11EFE246233422F5006EB504 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		11EFE246233422F5006EB504 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		11EFE24723342310006EB504 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		11EFE24823342347006EB504 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				113A62B22334143100401E89 /* Main.storyboard */,
+				11362B81233440EB000BA439 /* RestaurantsScreen */,
+				11362B7223342A6D000BA439 /* TypeOfFoodScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		11EFE2492334237A006EB504 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				11362B7423342E48000BA439 /* UIMethodsClass.swift */,
+				11362B7623342E5C000BA439 /* CustomColor.swift */,
+				11362B7A23343192000BA439 /* UIColor-Extention.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		83F693170DC1B6FA79C694AA /* Pods */ = {
@@ -210,9 +362,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */,
 				113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */,
-				113A62B12334143100401E89 /* ViewController.swift in Sources */,
+				11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */,
+				113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */,
+				11362B89233441E7000BA439 /* RestaurantsViewController.swift in Sources */,
 				113A62AF2334143100401E89 /* AppDelegate.swift in Sources */,
+				11362B7B23343193000BA439 /* UIColor-Extention.swift in Sources */,
+				11362B8023343AEB000BA439 /* TypeOfFoodViewController_Extension.swift in Sources */,
+				11362B7723342E5C000BA439 /* CustomColor.swift in Sources */,
+				11362B8723344193000BA439 /* RestaurantsTableViewCell.swift in Sources */,
+				11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

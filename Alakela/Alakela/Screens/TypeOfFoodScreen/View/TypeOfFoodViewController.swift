@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class TypeOfFoodViewController: UIViewController{
+   
+    @IBOutlet weak var typeTV: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //delegate in storyboard
+        //typeTV.delegate = self
+        //typeTV.dataSource = self
     }
-
+    
 
 }
 
