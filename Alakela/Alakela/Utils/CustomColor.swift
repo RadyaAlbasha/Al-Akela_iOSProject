@@ -26,6 +26,26 @@ struct CustomColor {
     static let summerSky = UIColor(red:0.00, green:0.68, blue:1.00, alpha:1.0)
     static let blueIcons = UIColor(rgb: 0x4699DB)
     static let lightCyan = UIColor(rgb: 0xEEF9F8)
+    static let lightCyan2 = UIColor(rgb: 0xE1F5FE)
     static let lightGray = UIColor(rgb: 0xCCCCCC)
+    
+    static let orange50 = UIColor(rgb: 0xFFF3E0)
+    static let orange100 = UIColor(rgb: 0xFFE0B2)
+    static let orange200 = UIColor(rgb: 0xFFCC80)
+    static let orange300 = UIColor(rgb: 0xFFB74D)
+    static let orange400 = UIColor(rgb: 0xFFA726)
+    static let orange500 = UIColor(rgb: 0xFF9800)
+    static let orange600 = UIColor(rgb: 0xFB8C00)
+    static let orange700 = UIColor(rgb: 0xF57C00)
+    static let orange800 = UIColor(rgb: 0xEF6C00)
+    static let orange900 = UIColor(rgb: 0xE65100)
+    
+    static let red50 = UIColor(rgb: 0xFFEBEE)
+    
+    static let background = UIColor(rgb: 0xFAFAFA)
+    static let dark = UIColor(rgb: 0x2B3D4D)
+    static let call = UIColor(rgb: 0x1A237E)
+    static let restaurant_name = UIColor(rgb: 0x2B3D4D)
+    static let restaurant_description = UIColor(rgb: 0x424242)
     
 }

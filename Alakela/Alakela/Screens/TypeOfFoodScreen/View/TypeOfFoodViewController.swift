@@ -18,7 +18,11 @@ class TypeOfFoodViewController: UIViewController{
         //typeTV.delegate = self
         //typeTV.dataSource = self
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = typeTV.indexPathForSelectedRow{
+            self.typeTV.deselectRow(at: index, animated: true)
+        }
+    }
 
 }
 

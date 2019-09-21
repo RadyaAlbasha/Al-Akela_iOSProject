@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F0DAC23367B5F0054FBEE /* MenuViewController.swift */; };
 		11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7423342E48000BA439 /* UIMethodsClass.swift */; };
 		11362B7723342E5C000BA439 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7623342E5C000BA439 /* CustomColor.swift */; };
 		11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7823342F51000BA439 /* TypeOfFoodTableViewCell.swift */; };
@@ -22,10 +23,13 @@
 		113A62B92334143100401E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113A62B82334143100401E89 /* Assets.xcassets */; };
 		113A62BC2334143100401E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113A62BA2334143100401E89 /* LaunchScreen.storyboard */; };
 		11B1EA8A233417AC001B3219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11B1EA89233417AC001B3219 /* GoogleService-Info.plist */; };
+		11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */; };
+		11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D22336709D0074A3B9 /* RateViewController.swift */; };
 		7DD3C99D4B177D559038AE2D /* Pods_Alakela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633A5660932A5478C84E4038 /* Pods_Alakela.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112F0DAC23367B5F0054FBEE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		11362B7423342E48000BA439 /* UIMethodsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMethodsClass.swift; sourceTree = "<group>"; };
 		11362B7623342E5C000BA439 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		11362B7823342F51000BA439 /* TypeOfFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodTableViewCell.swift; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 		113A62BB2334143100401E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113A62BD2334143100401E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B1EA89233417AC001B3219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		11B4F6D22336709D0074A3B9 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		2A99503C20AFB83A6F9A3D75 /* Pods-Alakela.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alakela.release.xcconfig"; path = "Target Support Files/Pods-Alakela/Pods-Alakela.release.xcconfig"; sourceTree = "<group>"; };
 		633A5660932A5478C84E4038 /* Pods_Alakela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alakela.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7996BF1DE49344825F146CA9 /* Pods-Alakela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alakela.debug.xcconfig"; path = "Target Support Files/Pods-Alakela/Pods-Alakela.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +185,40 @@
 			path = Alakela;
 			sourceTree = "<group>";
 		};
+		11B4F6CC233667FD0074A3B9 /* RestaurantScreen */ = {
+			isa = PBXGroup;
+			children = (
+				11B4F6CF233668370074A3B9 /* Protocols */,
+				11B4F6CE2336682F0074A3B9 /* View */,
+				11B4F6CD2336681E0074A3B9 /* Presenter */,
+			);
+			path = RestaurantScreen;
+			sourceTree = "<group>";
+		};
+		11B4F6CD2336681E0074A3B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		11B4F6CE2336682F0074A3B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */,
+				11B4F6D22336709D0074A3B9 /* RateViewController.swift */,
+				112F0DAC23367B5F0054FBEE /* MenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11B4F6CF233668370074A3B9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		11EFE244233422C6006EB504 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				113A62B22334143100401E89 /* Main.storyboard */,
+				11B4F6CC233667FD0074A3B9 /* RestaurantScreen */,
 				11362B81233440EB000BA439 /* RestaurantsScreen */,
 				11362B7223342A6D000BA439 /* TypeOfFoodScreen */,
 			);
@@ -363,9 +404,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */,
+				11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */,
 				113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */,
+				112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */,
 				11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */,
 				113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */,
+				11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */,
 				11362B89233441E7000BA439 /* RestaurantsViewController.swift in Sources */,
 				113A62AF2334143100401E89 /* AppDelegate.swift in Sources */,
 				11362B7B23343193000BA439 /* UIColor-Extention.swift in Sources */,

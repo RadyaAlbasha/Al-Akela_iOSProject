@@ -1,27 +1,30 @@
 //
-//  RestaurantsViewController.swift
+//  RateViewController.swift
 //  Alakela
 //
-//  Created by Radya Al-Basha on 9/20/19.
+//  Created by Radya Al-Basha on 9/21/19.
 //  Copyright © 2019 Radya Al-Basha. All rights reserved.
 //
 
 import UIKit
+import Cosmos
+class RateViewController: UIViewController {
 
-class RestaurantsViewController: UIViewController {
-
-    @IBOutlet weak var restaurantsTV: UITableView!
+    @IBOutlet weak var rateV: CosmosView!
+    
+    @IBOutlet weak var rateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if let index = restaurantsTV.indexPathForSelectedRow{
-            self.restaurantsTV.deselectRow(at: index, animated: true)
-        }
+    @IBAction func confirm(_ sender: UIButton) {
+        let str = "Rating \(rateV.rating)/5.0"
+        rateLabel.text = str
     }
+    
     /*
     // MARK: - Navigation
 
