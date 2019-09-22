@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         FirebaseApp.configure()
+        self.window?.tintColor = CustomColor.orange800 // to change alert tint color (tint color for all app)
         return true
     }
 

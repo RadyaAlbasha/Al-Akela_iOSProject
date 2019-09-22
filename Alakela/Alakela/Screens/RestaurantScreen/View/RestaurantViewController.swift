@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import MapKit
 
 class RestaurantViewController: UIViewController {
 
@@ -28,6 +30,8 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var adBannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +48,17 @@ class RestaurantViewController: UIViewController {
         timeLabel.adjustsFontSizeToFitWidth = true
         
         
+        //load banner biew ads
+        let adRequest = GADRequest()
+        adRequest.testDevices = [kGADSimulatorID] // Sample device ID
+        
+        adBannerView.adUnitID = "ca-app-pub-6879161218719826/3487311533"
+        adBannerView.rootViewController = self
+        adBannerView.load(adRequest)
+        //adBannerView.load(GADRequest())
+        print(kGADAdSizeBanner)
+     
+        
     }
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
@@ -57,6 +72,45 @@ class RestaurantViewController: UIViewController {
         }
     }
     
+    @IBAction func complaint(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Alakela", message: "اذا كانت لديك شكوى وتريد التواصل مع صاحب المطعم", preferredStyle: .alert)
+       
+        alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: { action in
+            //code
+            let str:String!
+            str = "12345678"
+            self.makePhoneCall(number: str)
+        }))
+        alert.addAction(UIAlertAction(title: "لا", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+ 
+    }
+    
+    @IBAction func call(_ sender: UIButton) {
+        print("call")
+        let str:String!
+        str = "12345678"
+        makePhoneCall(number: str)
+    }
+    
+    @IBAction func showLocation(_ sender: UIButton) {
+        // open map
+        let latitude:CLLocationDegrees = 39.048825
+        let longitude:CLLocationDegrees = -120.981227
+        
+        let regionDistance:CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "restaurant name"
+        mapItem.openInMaps(launchOptions: options)
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -67,4 +121,22 @@ class RestaurantViewController: UIViewController {
     }
     */
 
+}
+extension RestaurantViewController: GADBannerViewDelegate {
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
+    }
+    
+    func makePhoneCall(number : String!) {
+        guard let numberStr = number , let url = URL(string: "telprompt://\(numberStr)") else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
 }

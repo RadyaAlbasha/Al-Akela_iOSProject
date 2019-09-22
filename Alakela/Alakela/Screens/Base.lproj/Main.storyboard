@@ -164,7 +164,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc2-wt-F1C">
                                                             <rect key="frame" x="0.0" y="61.333333333333321" width="248" height="6.6666666666666643"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-Do-PuB" customClass="CosmosView" customModule="Cosmos">
+                                                                <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-Do-PuB" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="128" y="0.0" width="120" height="6.666666666666667"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -241,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="1631.8840579710147" y="133.69565217391306"/>
         </scene>
-        <!--Restaurant Name-->
+        <!--Delegate-->
         <scene sceneID="HtC-RZ-aw6">
             <objects>
                 <viewController id="UeF-nG-ZMr" customClass="RestaurantViewController" customModule="Alakela" customModuleProvider="target" sceneMemberID="viewController">
@@ -269,6 +269,9 @@
                                                     <constraint firstAttribute="width" constant="32" id="WPD-nn-P48"/>
                                                 </constraints>
                                                 <state key="normal" image="phone"/>
+                                                <connections>
+                                                    <action selector="call:" destination="UeF-nG-ZMr" eventType="touchUpInside" id="mao-it-uiu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p6-uQ-MCy">
                                                 <rect key="frame" x="64" y="0.0" width="32" height="32"/>
@@ -277,6 +280,9 @@
                                                     <constraint firstAttribute="height" constant="32" id="pj0-7Y-mrg"/>
                                                 </constraints>
                                                 <state key="normal" image="map"/>
+                                                <connections>
+                                                    <action selector="showLocation:" destination="UeF-nG-ZMr" eventType="touchUpInside" id="YAf-mQ-age"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-CZ-qHH">
                                                 <rect key="frame" x="128" y="0.0" width="32" height="32"/>
@@ -285,6 +291,9 @@
                                                     <constraint firstAttribute="width" constant="32" id="SwD-PZ-dcf"/>
                                                 </constraints>
                                                 <state key="normal" image="angry"/>
+                                                <connections>
+                                                    <action selector="complaint:" destination="UeF-nG-ZMr" eventType="touchUpInside" id="wDn-mM-avA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -394,17 +403,28 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4M-4o-eV9">
-                                <rect key="frame" x="16" y="312" width="382" height="408"/>
+                                <rect key="frame" x="16" y="312" width="382" height="366"/>
                                 <connections>
                                     <segue destination="m3P-Kp-Hnj" kind="embed" id="net-Gy-UGq"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcX-Z8-v61">
-                                <rect key="frame" x="16" y="312" width="382" height="408"/>
+                                <rect key="frame" x="16" y="312" width="382" height="366"/>
                                 <connections>
                                     <segue destination="9PP-YZ-V7e" kind="embed" id="dWr-kn-oHT"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-VV-rYs" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="686" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VpF-r3-7Pm"/>
+                                    <constraint firstAttribute="width" constant="320" id="uLe-7O-heP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="UeF-nG-ZMr" id="me4-Ap-q3r"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -412,13 +432,15 @@
                             <constraint firstItem="qcX-Z8-v61" firstAttribute="top" secondItem="ud4-OD-M8n" secondAttribute="bottom" constant="8" id="7DR-Ff-afH"/>
                             <constraint firstItem="ud4-OD-M8n" firstAttribute="top" secondItem="GCP-dd-4DK" secondAttribute="bottom" constant="16" id="9DS-PX-ZU7"/>
                             <constraint firstItem="ttr-bm-GBF" firstAttribute="trailing" secondItem="GCP-dd-4DK" secondAttribute="trailing" constant="16" id="9xV-NJ-QfQ"/>
-                            <constraint firstAttribute="bottom" secondItem="e4M-4o-eV9" secondAttribute="bottom" constant="16" id="CjU-ff-YwP"/>
                             <constraint firstItem="ttr-bm-GBF" firstAttribute="trailing" secondItem="ud4-OD-M8n" secondAttribute="trailing" constant="16" id="FRh-In-bwl"/>
+                            <constraint firstItem="ttr-bm-GBF" firstAttribute="bottom" secondItem="gUS-VV-rYs" secondAttribute="bottom" id="FSO-uq-kdX"/>
                             <constraint firstItem="e4M-4o-eV9" firstAttribute="leading" secondItem="ttr-bm-GBF" secondAttribute="leading" constant="16" id="GgU-HG-Bl4"/>
                             <constraint firstItem="GCP-dd-4DK" firstAttribute="top" secondItem="ttr-bm-GBF" secondAttribute="top" constant="16" id="GoF-Sa-nMf"/>
-                            <constraint firstItem="ttr-bm-GBF" firstAttribute="bottom" secondItem="qcX-Z8-v61" secondAttribute="bottom" constant="16" id="HON-SB-8mK"/>
+                            <constraint firstItem="gUS-VV-rYs" firstAttribute="top" secondItem="qcX-Z8-v61" secondAttribute="bottom" constant="8" id="Tqx-Y6-EgV"/>
+                            <constraint firstItem="gUS-VV-rYs" firstAttribute="top" secondItem="e4M-4o-eV9" secondAttribute="bottom" constant="8" id="VPi-Ju-I53"/>
                             <constraint firstItem="ud4-OD-M8n" firstAttribute="leading" secondItem="ttr-bm-GBF" secondAttribute="leading" constant="16" id="Yre-Nz-7jZ"/>
                             <constraint firstItem="e4M-4o-eV9" firstAttribute="top" secondItem="ud4-OD-M8n" secondAttribute="bottom" constant="8" id="ZB2-hL-gZ0"/>
+                            <constraint firstItem="gUS-VV-rYs" firstAttribute="centerX" secondItem="GTE-x0-g63" secondAttribute="centerX" id="a3I-eV-s1B"/>
                             <constraint firstItem="qcX-Z8-v61" firstAttribute="leading" secondItem="ttr-bm-GBF" secondAttribute="leading" constant="16" id="pwa-4y-HjK"/>
                             <constraint firstItem="ttr-bm-GBF" firstAttribute="trailing" secondItem="qcX-Z8-v61" secondAttribute="trailing" constant="16" id="ref-WK-ntL"/>
                             <constraint firstItem="GCP-dd-4DK" firstAttribute="leading" secondItem="ttr-bm-GBF" secondAttribute="leading" constant="16" id="vzr-mR-rPa"/>
@@ -427,6 +449,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Restaurant Name" id="EbH-DH-DxU"/>
                     <connections>
+                        <outlet property="adBannerView" destination="gUS-VV-rYs" id="N5b-er-nlK"/>
                         <outlet property="foodTypeLabel" destination="GBg-Pf-gJy" id="L2g-d3-QxK"/>
                         <outlet property="locationLabel" destination="EoC-ab-b2w" id="KZe-Cd-x2y"/>
                         <outlet property="menuView" destination="qcX-Z8-v61" id="YAA-AP-FMF"/>
@@ -447,7 +470,7 @@
             <objects>
                 <viewController id="m3P-Kp-Hnj" customClass="RateViewController" customModule="Alakela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t5P-hf-dvf">
-                        <rect key="frame" x="0.0" y="0.0" width="382" height="408"/>
+                        <rect key="frame" x="0.0" y="0.0" width="382" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pleas give rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C67-XB-q6e">
@@ -482,7 +505,7 @@
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.48627450980392156" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="28H-Dt-okz"/>
-                                    <constraint firstAttribute="width" constant="80" id="RVl-mj-PS8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="RVl-mj-PS8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="CONFIRM">
@@ -526,7 +549,7 @@
             <objects>
                 <viewController id="9PP-YZ-V7e" customClass="MenuViewController" customModule="Alakela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3vz-Nk-Yj6">
-                        <rect key="frame" x="0.0" y="0.0" width="382" height="408"/>
+                        <rect key="frame" x="0.0" y="0.0" width="382" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-eq-1Lc">
@@ -534,7 +557,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0S-lC-4Xb" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                <rect key="frame" x="0.0" y="0.0" width="382" height="408"/>
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="366"/>
                                 <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.95744332720000003" green="0.54938298549999998" blue="0.14070267340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
