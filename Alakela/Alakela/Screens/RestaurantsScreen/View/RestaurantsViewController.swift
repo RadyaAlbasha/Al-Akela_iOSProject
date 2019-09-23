@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class RestaurantsViewController: UIViewController {
 
     @IBOutlet weak var restaurantsTV: UITableView!
+    @IBOutlet weak var adBannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //load banner biew ads
+        UIMethodsClass.loadAdBannerView(adBannerView: adBannerView, rootViewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

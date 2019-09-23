@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Alakela
+
+  Created by Radya Al-Basha on 9/23/19.
+  Copyright © 2019 Radya Al-Basha. All rights reserved.
+*/
+"Alakela" = "Alakela";
+"Complaint" = "If you have a complaint and want to communicate with the owner of the restaurant";
+"Yes" = "Yes";
+"No" = "No";
+"LanguageButton" = "عربي";
+"Rating" = "Rating";
+"1.0" = "1.0" ;
+"2.0" = "2.0" ;
+"3.0" = "3.0" ;
+"4.0" = "4.0" ;
+"5.0" = "5.0" ;
+"/5.0" = "/5.0" ;

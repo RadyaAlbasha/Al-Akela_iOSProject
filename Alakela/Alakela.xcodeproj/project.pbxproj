@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110DA7022339821B006AED96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DA7012339821B006AED96 /* Constants.swift */; };
 		112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F0DAC23367B5F0054FBEE /* MenuViewController.swift */; };
 		11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7423342E48000BA439 /* UIMethodsClass.swift */; };
 		11362B7723342E5C000BA439 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7623342E5C000BA439 /* CustomColor.swift */; };
@@ -22,6 +23,8 @@
 		113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 113A62B52334143100401E89 /* Alakela.xcdatamodeld */; };
 		113A62B92334143100401E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113A62B82334143100401E89 /* Assets.xcassets */; };
 		113A62BC2334143100401E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113A62BA2334143100401E89 /* LaunchScreen.storyboard */; };
+		118D74252338F5BB00AF54B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118D74272338F5BB00AF54B1 /* Localizable.strings */; };
+		118D742A2338FB7300AF54B1 /* String-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D74292338FB7300AF54B1 /* String-Extention.swift */; };
 		11B1EA8A233417AC001B3219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11B1EA89233417AC001B3219 /* GoogleService-Info.plist */; };
 		11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */; };
 		11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D22336709D0074A3B9 /* RateViewController.swift */; };
@@ -29,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110DA7012339821B006AED96 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		112F0DAC23367B5F0054FBEE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		11362B7423342E48000BA439 /* UIMethodsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMethodsClass.swift; sourceTree = "<group>"; };
 		11362B7623342E5C000BA439 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
@@ -46,6 +50,11 @@
 		113A62B82334143100401E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113A62BB2334143100401E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113A62BD2334143100401E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118D74212338F35C00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		118D74222338F35C00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		118D74262338F5BB00AF54B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		118D74282338F5CA00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		118D74292338FB7300AF54B1 /* String-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extention.swift"; sourceTree = "<group>"; };
 		11B1EA89233417AC001B3219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		11B4F6D22336709D0074A3B9 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
@@ -263,9 +272,12 @@
 		11EFE2492334237A006EB504 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				118D74272338F5BB00AF54B1 /* Localizable.strings */,
+				110DA7012339821B006AED96 /* Constants.swift */,
 				11362B7423342E48000BA439 /* UIMethodsClass.swift */,
 				11362B7623342E5C000BA439 /* CustomColor.swift */,
 				11362B7A23343192000BA439 /* UIColor-Extention.swift */,
+				118D74292338FB7300AF54B1 /* String-Extention.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -331,6 +343,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 113A62A22334143100401E89;
 			productRefGroup = 113A62AC2334143100401E89 /* Products */;
@@ -347,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118D74252338F5BB00AF54B1 /* Localizable.strings in Resources */,
 				113A62BC2334143100401E89 /* LaunchScreen.storyboard in Resources */,
 				11B1EA8A233417AC001B3219 /* GoogleService-Info.plist in Resources */,
 				113A62B92334143100401E89 /* Assets.xcassets in Resources */,
@@ -410,6 +424,7 @@
 				11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */,
 				113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */,
 				11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */,
+				110DA7022339821B006AED96 /* Constants.swift in Sources */,
 				11362B89233441E7000BA439 /* RestaurantsViewController.swift in Sources */,
 				113A62AF2334143100401E89 /* AppDelegate.swift in Sources */,
 				11362B7B23343193000BA439 /* UIColor-Extention.swift in Sources */,
@@ -417,6 +432,7 @@
 				11362B7723342E5C000BA439 /* CustomColor.swift in Sources */,
 				11362B8723344193000BA439 /* RestaurantsTableViewCell.swift in Sources */,
 				11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */,
+				118D742A2338FB7300AF54B1 /* String-Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +443,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				113A62B32334143100401E89 /* Base */,
+				118D74212338F35C00AF54B1 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -435,8 +452,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				113A62BB2334143100401E89 /* Base */,
+				118D74222338F35C00AF54B1 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		118D74272338F5BB00AF54B1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				118D74262338F5BB00AF54B1 /* en */,
+				118D74282338F5CA00AF54B1 /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -446,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -507,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

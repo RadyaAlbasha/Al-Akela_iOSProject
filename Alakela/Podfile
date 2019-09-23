@@ -11,5 +11,6 @@ pod 'Firebase/Database'
 pod 'Cosmos', '~> 19.0'
 pod 'ImageSlideshow', '~> 1.8'
 pod 'Google-Mobile-Ads-SDK'
+pod 'MOLH'
 
 end

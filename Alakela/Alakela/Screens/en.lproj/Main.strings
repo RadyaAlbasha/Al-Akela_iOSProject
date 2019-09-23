@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "type of food"; ObjectID = "9Uo-Tn-KKl"; */
+"9Uo-Tn-KKl.text" = "type of food";
+
+/* Class = "UILabel"; text = "Pleas give rate"; ObjectID = "C67-XB-q6e"; */
+"C67-XB-q6e.text" = "Pleas give rate";
+
+/* Class = "UINavigationItem"; title = "Restaurants"; ObjectID = "DgP-cW-MYU"; */
+"DgP-cW-MYU.title" = "Restaurants";
+
+/* Class = "UINavigationItem"; title = "Restaurant Name"; ObjectID = "EbH-DH-DxU"; */
+"EbH-DH-DxU.title" = "Restaurant Name";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "EoC-ab-b2w"; */
+"EoC-ab-b2w.text" = "Location";
+
+/* Class = "UILabel"; text = "types of food "; ObjectID = "GBg-Pf-gJy"; */
+"GBg-Pf-gJy.text" = "types of food ";
+
+/* Class = "UILabel"; text = "173"; ObjectID = "MDq-K2-LSu"; */
+"MDq-K2-LSu.text" = "173";
+
+/* Class = "UIButton"; normalTitle = "CONFIRM"; ObjectID = "MJw-GT-fUa"; */
+"MJw-GT-fUa.normalTitle" = "CONFIRM";
+
+/* Class = "UINavigationItem"; title = "Alakela"; ObjectID = "Qc1-N9-lwh"; */
+"Qc1-N9-lwh.title" = "Alakela";
+
+/* Class = "UILabel"; text = "Rating 2.0/5.0"; ObjectID = "Zfg-Uh-tHT"; */
+"Zfg-Uh-tHT.text" = "Rating 2.0/5.0";
+
+/* Class = "UILabel"; text = "Restaurant Name"; ObjectID = "Zv1-X6-QLZ"; */
+"Zv1-X6-QLZ.text" = "Restaurant Name";
+
+/* Class = "UILabel"; text = "45 min"; ObjectID = "bOT-s9-dUY"; */
+"bOT-s9-dUY.text" = "45 min";
+
+/* Class = "UIButton"; normalTitle = "Language"; ObjectID = "fH3-yv-kS0"; */
+"fH3-yv-kS0.normalTitle" = "Language";
+
+/* Class = "UILabel"; text = "available"; ObjectID = "gP2-Ey-7Pp"; */
+"gP2-Ey-7Pp.text" = "available";
+
+/* Class = "UILabel"; text = "types of food "; ObjectID = "jeg-6F-Wbf"; */
+"jeg-6F-Wbf.text" = "types of food ";
+
+/* Class = "UISegmentedControl"; ud4-OD-M8n.segmentTitles[0] = "Menu"; ObjectID = "ud4-OD-M8n"; */
+"ud4-OD-M8n.segmentTitles[0]" = "Menu";
+
+/* Class = "UISegmentedControl"; ud4-OD-M8n.segmentTitles[1] = "Rate"; ObjectID = "ud4-OD-M8n"; */
+"ud4-OD-M8n.segmentTitles[1]" = "Rate";

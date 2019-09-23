@@ -36,8 +36,12 @@ class RestaurantViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //load banner biew ads
+        UIMethodsClass.loadAdBannerView(adBannerView: adBannerView, rootViewController: self)
+        
        //start by selecting menu
-        segment.selectedSegmentIndex = 1
+        //segment.selectedSegmentIndex = 0
         rateView.alpha = 0
     //
         UIMethodsClass.roundedView(rView: restaurantImgV, radius: CGFloat(restaurantImgV.frame.width / 2))
@@ -48,15 +52,7 @@ class RestaurantViewController: UIViewController {
         timeLabel.adjustsFontSizeToFitWidth = true
         
         
-        //load banner biew ads
-        let adRequest = GADRequest()
-        adRequest.testDevices = [kGADSimulatorID] // Sample device ID
         
-        adBannerView.adUnitID = "ca-app-pub-6879161218719826/3487311533"
-        adBannerView.rootViewController = self
-        adBannerView.load(adRequest)
-        //adBannerView.load(GADRequest())
-        print(kGADAdSizeBanner)
      
         
     }
@@ -64,24 +60,24 @@ class RestaurantViewController: UIViewController {
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0{
-            rateView.alpha = 1
-            menuView.alpha = 0
-        }else{
             rateView.alpha = 0
             menuView.alpha = 1
+        }else{
+            rateView.alpha = 1
+            menuView.alpha = 0
         }
     }
     
     @IBAction func complaint(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Alakela", message: "اذا كانت لديك شكوى وتريد التواصل مع صاحب المطعم", preferredStyle: .alert)
+        let alert = UIAlertController(title:"Alakela".localized, message:"Complaint".localized, preferredStyle: .alert)
        
-        alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Yes".localized, style: .default, handler: { action in
             //code
             let str:String!
             str = "12345678"
             self.makePhoneCall(number: str)
         }))
-        alert.addAction(UIAlertAction(title: "لا", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "No".localized, style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
  

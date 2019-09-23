@@ -21,7 +21,7 @@ class RateViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: UIButton) {
-        let str = "Rating \(rateV.rating)/5.0"
+        let str = "\("Rating".localized) \(String(rateV.rating).localized)\("/5.0".localized)"
         rateLabel.text = str
     }
     
