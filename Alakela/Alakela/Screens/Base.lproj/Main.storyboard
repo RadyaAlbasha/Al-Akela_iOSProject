@@ -18,9 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="akela" translatesAutoresizingMaskIntoConstraints="NO" id="osD-zF-5Om">
-                                <rect key="frame" x="16" y="80.000000000000014" width="382" height="147.33333333333337"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="19o-n6-yli">
                                 <rect key="frame" x="16" y="243.33333333333334" width="382" height="434.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,17 +76,22 @@
                                     <outlet property="delegate" destination="UeF-nG-ZMr" id="fPd-yJ-zSG"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-HA-4S1" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="16" y="80.000000000000014" width="382" height="147.33333333333337"/>
+                                <color key="backgroundColor" red="1" green="0.95294117649999999" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.95686274509803915" green="0.5490196078431373" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="osD-zF-5Om" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="2xZ-Ep-XLZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TkY-HA-4S1" secondAttribute="trailing" constant="16" id="5Ed-Ju-uVr"/>
+                            <constraint firstItem="TkY-HA-4S1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="5lj-Dx-yhS"/>
                             <constraint firstItem="19o-n6-yli" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6JJ-cS-sZ6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osD-zF-5Om" secondAttribute="trailing" constant="16" id="P6N-Cz-8Qv"/>
-                            <constraint firstItem="osD-zF-5Om" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QVz-od-PsM"/>
+                            <constraint firstItem="19o-n6-yli" firstAttribute="top" secondItem="TkY-HA-4S1" secondAttribute="bottom" constant="16" id="GAh-em-15R"/>
+                            <constraint firstItem="TkY-HA-4S1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ICU-Zy-Sb8"/>
                             <constraint firstItem="WGY-GU-aZl" firstAttribute="top" secondItem="19o-n6-yli" secondAttribute="bottom" constant="8" id="R09-X4-6hv"/>
-                            <constraint firstItem="19o-n6-yli" firstAttribute="top" secondItem="osD-zF-5Om" secondAttribute="bottom" constant="16" id="bus-9G-t2a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19o-n6-yli" secondAttribute="trailing" constant="16" id="dH0-Kr-aUb"/>
-                            <constraint firstItem="osD-zF-5Om" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="jTa-l2-auv"/>
+                            <constraint firstItem="TkY-HA-4S1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oIo-20-PuQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WGY-GU-aZl" secondAttribute="bottom" id="qOn-ZT-XBf"/>
                             <constraint firstItem="WGY-GU-aZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHP-Zh-g3S"/>
                         </constraints>
@@ -110,6 +112,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="adBannerView" destination="WGY-GU-aZl" id="agM-ae-XuB"/>
+                        <outlet property="adSlideshow" destination="TkY-HA-4S1" id="8T4-7n-Rew"/>
                         <outlet property="languageButton" destination="fH3-yv-kS0" id="lbG-fU-QiU"/>
                         <outlet property="typeTV" destination="19o-n6-yli" id="j6V-N4-Au5"/>
                     </connections>
@@ -149,7 +152,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shrimp" translatesAutoresizingMaskIntoConstraints="NO" id="nOF-Bn-kcQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="akela" translatesAutoresizingMaskIntoConstraints="NO" id="nOF-Bn-kcQ">
                                 <rect key="frame" x="16" y="80.000000000000014" width="382" height="147.33333333333337"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-4Z-QiY">
@@ -281,6 +284,7 @@
                     <connections>
                         <outlet property="adBannerView" destination="sZb-Cm-uRn" id="wNp-oa-aMV"/>
                         <outlet property="restaurantsTV" destination="TMG-4Z-QiY" id="cd2-3u-Gin"/>
+                        <outlet property="typeImgV" destination="nOF-Bn-kcQ" id="8X3-k2-ZVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yoh-ae-eCI" sceneMemberID="firstResponder"/>
@@ -496,6 +500,7 @@
                     <navigationItem key="navigationItem" title="Restaurant Name" id="EbH-DH-DxU"/>
                     <connections>
                         <outlet property="adBannerView" destination="gUS-VV-rYs" id="N5b-er-nlK"/>
+                        <outlet property="detailsView" destination="GCP-dd-4DK" id="kbI-Ou-4xD"/>
                         <outlet property="foodTypeLabel" destination="GBg-Pf-gJy" id="L2g-d3-QxK"/>
                         <outlet property="locationLabel" destination="EoC-ab-b2w" id="KZe-Cd-x2y"/>
                         <outlet property="menuView" destination="qcX-Z8-v61" id="YAA-AP-FMF"/>
@@ -520,13 +525,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pleas give rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C67-XB-q6e">
-                                <rect key="frame" x="128" y="16" width="126.33333333333331" height="21.666666666666671"/>
+                                <rect key="frame" x="128" y="16" width="126" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8q-HB-Qxi" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="93.666666666666686" y="53.666666666666657" width="195" height="35"/>
+                                <rect key="frame" x="93.666666666666686" y="54" width="195" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
@@ -547,7 +552,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJw-GT-fUa">
-                                <rect key="frame" x="151" y="120.66666666666669" width="80" height="40"/>
+                                <rect key="frame" x="151" y="121" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.48627450980392156" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="28H-Dt-okz"/>
@@ -562,7 +567,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating 2.0/5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-Uh-tHT">
-                                <rect key="frame" x="136" y="176.66666666666666" width="110" height="21"/>
+                                <rect key="frame" x="136" y="177" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.93725490196078431" green="0.42352941176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -606,10 +611,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0S-lC-4Xb" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="366"/>
                                 <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.95744332720000003" green="0.54938298549999998" blue="0.14070267340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.95686274509803915" green="0.5490196078431373" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.87843137250000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3IG-2f-wpq" firstAttribute="trailing" secondItem="O0S-lC-4Xb" secondAttribute="trailing" id="22E-wQ-qDH"/>
                             <constraint firstItem="O0S-lC-4Xb" firstAttribute="leading" secondItem="3IG-2f-wpq" secondAttribute="leading" id="aAL-3r-p2d"/>

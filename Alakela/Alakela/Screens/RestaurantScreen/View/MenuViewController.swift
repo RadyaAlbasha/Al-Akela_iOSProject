@@ -15,8 +15,9 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        UIMethodsClass.roundedView(rView: slideshow.subviews[0], radius: 5)
+        
         slideshow.slideshowInterval = 5.0
         slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill

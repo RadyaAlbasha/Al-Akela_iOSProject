@@ -32,10 +32,14 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var adBannerView: GADBannerView!
     
+    @IBOutlet weak var detailsView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        UIMethodsClass.roundedView(rView: restaurantImgV, radius: 5)
+        UIMethodsClass.roundedView(rView: detailsView, radius: 5)
         
         //load banner biew ads
         UIMethodsClass.loadAdBannerView(adBannerView: adBannerView, rootViewController: self)
