@@ -8,16 +8,40 @@
 
 import Foundation
 import UIKit
-extension RestaurantsViewController: UITableViewDelegate , UITableViewDataSource{
+import SDWebImage
+extension RestaurantsViewController: RestaurantsViewControllerProtocol, UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return restaurantsDict.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rCell", for: indexPath) as! RestaurantsTableViewCell
-        //cell.typeImgV =
-        //cell.typeLabel =
+        let key = Array(restaurantsDict.keys.sorted())[indexPath.row]
+     
+        if let url = restaurantsDict[key]?.logoUri {
+            cell.restaurantImgV.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named:"logo"))
+        }
+        cell.restaurantNameLabel.text = key
+        cell.restaurantDetailsLabel.text = restaurantsDict[key]?.description
+        
+        if restaurantsDict[key]?.rate != nil{
+            if let dRate = Double((restaurantsDict[key]?.rate!)!) {
+                cell.cosmosView.rating =  dRate
+            }
+        }
+        
         return cell
     }
+    
+    func showRestaurants(restaurantsDict: [String : Restaurant]) {
+        self.restaurantsDict = restaurantsDict
+        restaurantsTV.reloadData()
+        networkIndicator.stopAnimating()
+    }
+    
+    func setCollectionKey(collectionKey: String) {
+        self.collectionKey = collectionKey
+    }
+    
 }

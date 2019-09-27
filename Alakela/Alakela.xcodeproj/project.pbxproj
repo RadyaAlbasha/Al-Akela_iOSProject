@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		110DA7022339821B006AED96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DA7012339821B006AED96 /* Constants.swift */; };
+		1117F193233A8F4500559399 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117F192233A8F4500559399 /* Restaurant.swift */; };
+		1117F195233A910500559399 /* NetworkAccessClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117F194233A910500559399 /* NetworkAccessClass.swift */; };
+		1117F197233A913400559399 /* NetworkAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117F196233A913400559399 /* NetworkAccessProtocol.swift */; };
 		112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112F0DAC23367B5F0054FBEE /* MenuViewController.swift */; };
 		11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7423342E48000BA439 /* UIMethodsClass.swift */; };
 		11362B7723342E5C000BA439 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11362B7623342E5C000BA439 /* CustomColor.swift */; };
@@ -25,14 +28,26 @@
 		113A62BC2334143100401E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113A62BA2334143100401E89 /* LaunchScreen.storyboard */; };
 		118D74252338F5BB00AF54B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118D74272338F5BB00AF54B1 /* Localizable.strings */; };
 		118D742A2338FB7300AF54B1 /* String-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D74292338FB7300AF54B1 /* String-Extention.swift */; };
+		11A697CB233AB2030071E239 /* TypeOfFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A697CA233AB2030071E239 /* TypeOfFoodPresenter.swift */; };
+		11A697CD233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A697CC233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift */; };
+		11A697CF233AB3800071E239 /* TypeOfFoodViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A697CE233AB3800071E239 /* TypeOfFoodViewControllerProtocol.swift */; };
+		11AD66D0233A7D060092779A /* FirestoreKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD66CF233A7D060092779A /* FirestoreKeys.swift */; };
 		11B1EA8A233417AC001B3219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11B1EA89233417AC001B3219 /* GoogleService-Info.plist */; };
 		11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */; };
 		11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4F6D22336709D0074A3B9 /* RateViewController.swift */; };
+		11E5F19D233E4C2B00CB82C0 /* RestaurantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5F19C233E4C2B00CB82C0 /* RestaurantsPresenter.swift */; };
+		11E5F19F233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5F19E233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift */; };
+		11E5F1A1233E4C5A00CB82C0 /* RestaurantsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5F1A0233E4C5A00CB82C0 /* RestaurantsViewControllerProtocol.swift */; };
+		11E5F1A3233E828500CB82C0 /* RestaurantViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5F1A2233E828500CB82C0 /* RestaurantViewControllerProtocol.swift */; };
+		11E5F1A5233E82E800CB82C0 /* RestaurantViewController_Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5F1A4233E82E800CB82C0 /* RestaurantViewController_Extention.swift */; };
 		7DD3C99D4B177D559038AE2D /* Pods_Alakela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633A5660932A5478C84E4038 /* Pods_Alakela.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		110DA7012339821B006AED96 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1117F192233A8F4500559399 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		1117F194233A910500559399 /* NetworkAccessClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessClass.swift; sourceTree = "<group>"; };
+		1117F196233A913400559399 /* NetworkAccessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessProtocol.swift; sourceTree = "<group>"; };
 		112F0DAC23367B5F0054FBEE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		11362B7423342E48000BA439 /* UIMethodsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMethodsClass.swift; sourceTree = "<group>"; };
 		11362B7623342E5C000BA439 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
@@ -55,9 +70,18 @@
 		118D74262338F5BB00AF54B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		118D74282338F5CA00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		118D74292338FB7300AF54B1 /* String-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extention.swift"; sourceTree = "<group>"; };
+		11A697CA233AB2030071E239 /* TypeOfFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodPresenter.swift; sourceTree = "<group>"; };
+		11A697CC233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodPresenterProtocol.swift; sourceTree = "<group>"; };
+		11A697CE233AB3800071E239 /* TypeOfFoodViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFoodViewControllerProtocol.swift; sourceTree = "<group>"; };
+		11AD66CF233A7D060092779A /* FirestoreKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreKeys.swift; sourceTree = "<group>"; };
 		11B1EA89233417AC001B3219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		11B4F6D22336709D0074A3B9 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		11E5F19C233E4C2B00CB82C0 /* RestaurantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsPresenter.swift; sourceTree = "<group>"; };
+		11E5F19E233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsPresenterProtocol.swift; sourceTree = "<group>"; };
+		11E5F1A0233E4C5A00CB82C0 /* RestaurantsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		11E5F1A2233E828500CB82C0 /* RestaurantViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewControllerProtocol.swift; sourceTree = "<group>"; };
+		11E5F1A4233E82E800CB82C0 /* RestaurantViewController_Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController_Extention.swift; sourceTree = "<group>"; };
 		2A99503C20AFB83A6F9A3D75 /* Pods-Alakela.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alakela.release.xcconfig"; path = "Target Support Files/Pods-Alakela/Pods-Alakela.release.xcconfig"; sourceTree = "<group>"; };
 		633A5660932A5478C84E4038 /* Pods_Alakela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alakela.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7996BF1DE49344825F146CA9 /* Pods-Alakela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alakela.debug.xcconfig"; path = "Target Support Files/Pods-Alakela/Pods-Alakela.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +130,8 @@
 		11362B7D23343A7D000BA439 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				11A697CC233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift */,
+				11A697CE233AB3800071E239 /* TypeOfFoodViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -113,6 +139,7 @@
 		11362B7E23343A8F000BA439 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				11A697CA233AB2030071E239 /* TypeOfFoodPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -130,6 +157,7 @@
 		11362B8223344104000BA439 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				11E5F19C233E4C2B00CB82C0 /* RestaurantsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -147,6 +175,8 @@
 		11362B842334411D000BA439 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				11E5F19E233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift */,
+				11E5F1A0233E4C5A00CB82C0 /* RestaurantsViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -194,6 +224,14 @@
 			path = Alakela;
 			sourceTree = "<group>";
 		};
+		11A697C9233AB18E0071E239 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1117F196233A913400559399 /* NetworkAccessProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		11B4F6CC233667FD0074A3B9 /* RestaurantScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				11B4F6D02336686A0074A3B9 /* RestaurantViewController.swift */,
+				11E5F1A4233E82E800CB82C0 /* RestaurantViewController_Extention.swift */,
 				11B4F6D22336709D0074A3B9 /* RateViewController.swift */,
 				112F0DAC23367B5F0054FBEE /* MenuViewController.swift */,
 			);
@@ -224,6 +263,7 @@
 		11B4F6CF233668370074A3B9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				11E5F1A2233E828500CB82C0 /* RestaurantViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -231,6 +271,8 @@
 		11EFE244233422C6006EB504 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				11AD66CF233A7D060092779A /* FirestoreKeys.swift */,
+				1117F192233A8F4500559399 /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +289,8 @@
 		11EFE246233422F5006EB504 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				11A697C9233AB18E0071E239 /* Protocol */,
+				1117F194233A910500559399 /* NetworkAccessClass.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -417,18 +461,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E5F19F233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift in Sources */,
 				11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */,
 				11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */,
 				113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */,
+				11A697CB233AB2030071E239 /* TypeOfFoodPresenter.swift in Sources */,
 				112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */,
+				11E5F1A3233E828500CB82C0 /* RestaurantViewControllerProtocol.swift in Sources */,
+				11A697CF233AB3800071E239 /* TypeOfFoodViewControllerProtocol.swift in Sources */,
+				11E5F1A5233E82E800CB82C0 /* RestaurantViewController_Extention.swift in Sources */,
+				11AD66D0233A7D060092779A /* FirestoreKeys.swift in Sources */,
 				11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */,
+				11A697CD233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift in Sources */,
+				11E5F19D233E4C2B00CB82C0 /* RestaurantsPresenter.swift in Sources */,
 				113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */,
+				1117F193233A8F4500559399 /* Restaurant.swift in Sources */,
+				11E5F1A1233E4C5A00CB82C0 /* RestaurantsViewControllerProtocol.swift in Sources */,
 				11B4F6D32336709D0074A3B9 /* RateViewController.swift in Sources */,
 				110DA7022339821B006AED96 /* Constants.swift in Sources */,
 				11362B89233441E7000BA439 /* RestaurantsViewController.swift in Sources */,
 				113A62AF2334143100401E89 /* AppDelegate.swift in Sources */,
+				1117F197233A913400559399 /* NetworkAccessProtocol.swift in Sources */,
 				11362B7B23343193000BA439 /* UIColor-Extention.swift in Sources */,
 				11362B8023343AEB000BA439 /* TypeOfFoodViewController_Extension.swift in Sources */,
+				1117F195233A910500559399 /* NetworkAccessClass.swift in Sources */,
 				11362B7723342E5C000BA439 /* CustomColor.swift in Sources */,
 				11362B8723344193000BA439 /* RestaurantsTableViewCell.swift in Sources */,
 				11362B7523342E48000BA439 /* UIMethodsClass.swift in Sources */,

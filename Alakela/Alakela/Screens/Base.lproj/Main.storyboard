@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="95.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shrimp" translatesAutoresizingMaskIntoConstraints="NO" id="w1C-2B-nCT">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="w1C-2B-nCT">
                                                     <rect key="frame" x="8" y="8.3333333333333357" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="Emy-5c-Y0h"/>
@@ -166,7 +166,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="105.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shrimp" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-eH-hu9">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-eH-hu9">
                                                     <rect key="frame" x="8" y="8" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="VY7-oV-2na"/>
@@ -302,7 +302,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCP-dd-4DK">
                                 <rect key="frame" x="16" y="80" width="382" height="180"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shrimp" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-3r-Q8k">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-3r-Q8k">
                                         <rect key="frame" x="8" y="45" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Bit-r1-L2e"/>
@@ -588,6 +588,7 @@
                     </view>
                     <size key="freeformSize" width="382" height="210"/>
                     <connections>
+                        <outlet property="confirmBtn" destination="MJw-GT-fUa" id="VBY-5x-Hg1"/>
                         <outlet property="rateLabel" destination="Zfg-Uh-tHT" id="dGr-hA-GGS"/>
                         <outlet property="rateV" destination="q8q-HB-Qxi" id="RAA-sd-eiY"/>
                     </connections>
@@ -629,17 +630,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHa-P9-dXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.9275362318845" y="759.37500000000011"/>
+            <point key="canvasLocation" x="2722" y="822"/>
         </scene>
     </scenes>
     <resources>
         <image name="akela" width="600" height="400"/>
         <image name="angry" width="42.666667938232422" height="42.666667938232422"/>
         <image name="clock" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="logo" width="512" height="512"/>
         <image name="map" width="42.666667938232422" height="42.666667938232422"/>
         <image name="phone" width="42.666667938232422" height="42.666667938232422"/>
         <image name="scooter" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="shrimp" width="736" height="554"/>
         <image name="view" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>

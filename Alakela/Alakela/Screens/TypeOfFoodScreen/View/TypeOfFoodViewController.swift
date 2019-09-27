@@ -21,16 +21,24 @@ class TypeOfFoodViewController: UIViewController{
     
     @IBOutlet weak var adSlideshow: ImageSlideshow!
     
-     let localSource = [BundleImageSource(imageString: "img1"), BundleImageSource(imageString: "img2"), BundleImageSource(imageString: "img3"), BundleImageSource(imageString: "img4")]
+    var  networkIndicator : UIActivityIndicatorView!
     
+    let localSource = [BundleImageSource(imageString: "akela")]
+    let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market]//array of string
+    var typeOfFoodPresenter : TypeOfFoodPresenterProtocol = TypeOfFoodPresenter()
+    //var docRef: DocumentRefrence!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         //delegate in storyboard
         //typeTV.delegate = self
         //typeTV.dataSource = self
         
+        networkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideshow.subviews[0])
+        
+        typeOfFoodPresenter.setDelegate(delegate: self)
+        
+        //make view rounded
         UIMethodsClass.roundedView(rView: adSlideshow, radius: 5)
         UIMethodsClass.roundedView(rView: typeTV, radius: 5)
         
@@ -40,14 +48,13 @@ class TypeOfFoodViewController: UIViewController{
         languageButton.setTitle("LanguageButton".localized, for: .normal)
         
         // Do any additional setup after loading the view.
-        adSlideshow.slideshowInterval = 5.0
+        adSlideshow.slideshowInterval = 3.0
         adSlideshow.contentScaleMode = UIViewContentMode.scaleToFill
         
         adSlideshow.pageIndicator = nil
         // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-        adSlideshow.setImageInputs(localSource)
-        
-        
+        //show ads slideshow
+        typeOfFoodPresenter.showAdsImages()
     }
     override func viewWillAppear(_ animated: Bool) {
         if let index = typeTV.indexPathForSelectedRow{
@@ -59,7 +66,14 @@ class TypeOfFoodViewController: UIViewController{
         MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
         MOLH.reset()
     }
+    // MARK: - Navigation
     
-
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using [segue destinationViewController].
+        let restaurantsDelegate = segue.destination as! RestaurantsViewControllerProtocol
+        // Pass the selected object to the new view controller.
+         restaurantsDelegate.setCollectionKey(collectionKey: typeOfFood[(self.typeTV?.indexPath(for: sender as! UITableViewCell)?.row)!])
+    }
 }
 

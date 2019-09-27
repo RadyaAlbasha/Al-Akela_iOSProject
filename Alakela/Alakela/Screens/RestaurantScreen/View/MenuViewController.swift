@@ -59,4 +59,8 @@ extension MenuViewController: ImageSlideshowDelegate {
         func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
             print("current page:", page)
         }
+    
+        func showMenuImages(menuUri : [String]!) {
+        
+        }
 }

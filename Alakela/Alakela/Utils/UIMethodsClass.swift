@@ -29,4 +29,13 @@ class UIMethodsClass {
         adBannerView.load(adRequest)
         //adBannerView.load(GADRequest())
     }
+    static func showNetworkIndicator(view : UIView) -> UIActivityIndicatorView
+    {
+        let networkIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+        networkIndicator.color = CustomColor.orange800
+        networkIndicator.center = view.center
+        networkIndicator.startAnimating()
+        view.addSubview(networkIndicator)
+        return networkIndicator
+    }
 }

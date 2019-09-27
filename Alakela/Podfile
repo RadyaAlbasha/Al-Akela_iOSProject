@@ -8,8 +8,10 @@ target 'Alakela' do
   # Pods for Alakela
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 pod 'Cosmos', '~> 19.0'
 pod 'ImageSlideshow', '~> 1.8'
+pod 'ImageSlideshow/SDWebImage'
 pod 'Google-Mobile-Ads-SDK'
 pod 'MOLH'
 

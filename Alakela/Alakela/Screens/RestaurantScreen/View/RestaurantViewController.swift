@@ -34,6 +34,8 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var detailsView: UIView!
     
+    var restaurant : Restaurant!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,11 +56,15 @@ class RestaurantViewController: UIViewController {
         viewLabel.adjustsFontSizeToFitWidth = true
         statusLabel.adjustsFontSizeToFitWidth = true
         timeLabel.adjustsFontSizeToFitWidth = true
-        
-        
-        
      
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if restaurant != nil{
+            self.title = restaurant.name
+            showRestaurantDetails(restaurant: restaurant)
+        }
     }
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
@@ -77,8 +83,7 @@ class RestaurantViewController: UIViewController {
        
         alert.addAction(UIAlertAction(title: "Yes".localized, style: .default, handler: { action in
             //code
-            let str:String!
-            str = "12345678"
+            let str = self.restaurant.ownerPhone
             self.makePhoneCall(number: str)
         }))
         alert.addAction(UIAlertAction(title: "No".localized, style: .cancel, handler: nil))
@@ -122,21 +127,4 @@ class RestaurantViewController: UIViewController {
     */
 
 }
-extension RestaurantViewController: GADBannerViewDelegate {
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("Banner loaded successfully")
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Fail to receive ads")
-        print(error)
-    }
-    
-    func makePhoneCall(number : String!) {
-        guard let numberStr = number , let url = URL(string: "telprompt://\(numberStr)") else {
-            return
-        }
-        UIApplication.shared.open(url)
-    }
-}
+

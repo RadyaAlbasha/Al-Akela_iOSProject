@@ -8,17 +8,68 @@
 
 import Foundation
 import UIKit
-extension TypeOfFoodViewController: UITableViewDelegate , UITableViewDataSource{
+import ImageSlideshow
+import FirebaseFirestore
+
+extension TypeOfFoodViewController: TypeOfFoodViewControllerProtocol,UITableViewDelegate , UITableViewDataSource{
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return typeOfFood.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tCell", for: indexPath) as! TypeOfFoodTableViewCell
-        //cell.typeImgV =
-        //cell.typeLabel =
+        cell.typeImgV.image = UIImage(named: typeOfFood[indexPath.row])
+        cell.typeLabel.text = typeOfFood[indexPath.row].localized
         return cell
     }
+    func setDelegate(delegate: TypeOfFoodPresenterProtocol) {
+        self.typeOfFoodPresenter = delegate
+    }
+    
+    func showAdImages(adUris: [String]!) {
+        if adUris != nil{
+            var sdWebImageSource = [SDWebImageSource]()
+            for uri in (adUris)!{
+                
+                    sdWebImageSource.append(SDWebImageSource(urlString: uri)!)//download images
+                }
+                adSlideshow.setImageInputs(sdWebImageSource)//show images
+        }
+        else{
+            adSlideshow.setImageInputs(localSource)//show default image
+        }
+        
+        networkIndicator.stopAnimating()
+    }
+    
+    /*
+    func showAdsImages(adSlideshow: ImageSlideshow!){
+        let db = Firestore.firestore()
+        db.collection(FirestoreKeys.Collection_Ads).getDocuments { [weak self](snapshot, error) in
+            if error != nil{
+                print("Error")
+                adSlideshow.setImageInputs(self!.localSource)
+            }else{
+                var sdWebImageSource = [SDWebImageSource]()
+                for document in (snapshot?.documents)!{
+                    if let adUri = document.data()[FirestoreKeys.Field_adUri] as? String{
+                       /* print("\n")
+                        print(adUri)
+                        print(document.documentID)
+                        print("\n")*/
+                        
+                        sdWebImageSource.append(SDWebImageSource(urlString: adUri)!)
+                    }
+                }
+                adSlideshow.setImageInputs(sdWebImageSource)
+            }
+        }
+    }
+    
+    */
+    
+    
 }
 

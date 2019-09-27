@@ -13,11 +13,13 @@ class RateViewController: UIViewController {
     @IBOutlet weak var rateV: CosmosView!
     
     @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var confirmBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        UIMethodsClass.roundedView(rView: confirmBtn, radius: 5)
     }
     
     @IBAction func confirm(_ sender: UIButton) {
