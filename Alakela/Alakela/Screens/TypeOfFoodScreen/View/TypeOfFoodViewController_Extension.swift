@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 import ImageSlideshow
-import FirebaseFirestore
 
+@available(iOS 13.0, *)
 extension TypeOfFoodViewController: TypeOfFoodViewControllerProtocol,UITableViewDelegate , UITableViewDataSource{
     
-    
+    // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return typeOfFood.count
     }
@@ -24,6 +24,8 @@ extension TypeOfFoodViewController: TypeOfFoodViewControllerProtocol,UITableView
         cell.typeLabel.text = typeOfFood[indexPath.row].localized
         return cell
     }
+    
+     // MARK: - TypeOfFoodViewControllerProtocol
     func setDelegate(delegate: TypeOfFoodPresenterProtocol) {
         self.typeOfFoodPresenter = delegate
     }

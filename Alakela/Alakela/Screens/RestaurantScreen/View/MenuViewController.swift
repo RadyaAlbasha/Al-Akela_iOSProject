@@ -8,10 +8,13 @@
 
 import UIKit
 import ImageSlideshow
+@available(iOS 13.0, *)
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var slideshow: ImageSlideshow!
     let localSource = [BundleImageSource(imageString: "img1"), BundleImageSource(imageString: "img2"), BundleImageSource(imageString: "img3"), BundleImageSource(imageString: "img4")]
+    var restaurant : Restaurant!
+    //var  networkIndicator : UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +39,17 @@ class MenuViewController: UIViewController {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.didTap))
         slideshow.addGestureRecognizer(recognizer)
+        
+        //networkIndicator = UIMethodsClass.showNetworkIndicator(view: slideshow.subviews[0])
+        showMenuImages(menuUri: restaurant.menuUri)
     }
+    @available(iOS 13.0, *)
     @objc func didTap() {
+        
         let fullScreenController = slideshow.presentFullScreenController(from: self)
         // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
-        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
+        
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
     }
 
     /*
@@ -55,12 +64,20 @@ class MenuViewController: UIViewController {
 
 }
 
+@available(iOS 13.0, *)
 extension MenuViewController: ImageSlideshowDelegate {
         func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
             print("current page:", page)
         }
     
         func showMenuImages(menuUri : [String]!) {
-        
+            if menuUri != nil{
+                var sdWebImageSource = [SDWebImageSource]()
+                for uri in (menuUri)!{
+                    
+                        sdWebImageSource.append(SDWebImageSource(urlString: uri)!)//download images
+                    }
+                slideshow.setImageInputs(sdWebImageSource)//show images
+            }
         }
 }

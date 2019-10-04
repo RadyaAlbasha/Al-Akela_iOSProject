@@ -10,4 +10,5 @@ import Foundation
 protocol RestaurantsViewControllerProtocol {
     func showRestaurants(restaurantsDict: [String: Restaurant])
     func setCollectionKey(collectionKey : String)
+    func showAdImages(adUris: [String]!)
 }

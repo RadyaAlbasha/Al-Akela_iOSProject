@@ -8,6 +8,7 @@
 
 import Foundation
 import GoogleMobileAds
+@available(iOS 13.0, *)
 extension RestaurantViewController: RestaurantViewControllerProtocol ,GADBannerViewDelegate {
   
     // MARK: - GADBannerViewDelegate
@@ -19,12 +20,41 @@ extension RestaurantViewController: RestaurantViewControllerProtocol ,GADBannerV
         print("Fail to receive ads")
         print(error)
     }
-    
     func makePhoneCall(number : String!) {
-        guard let numberStr = number , let url = URL(string: "telprompt://\(numberStr)") else {
+           guard let numberStr = number , let url = URL(string: "telprompt://\(numberStr)") else {
+               return
+           }
+           UIApplication.shared.open(url)
+    }
+    func choosePhoneNumberToCall(numbers : [String]!) {
+       /* guard let numberStr = number , let url = URL(string: "telprompt://\(numberStr)") else {
             return
         }
-        UIApplication.shared.open(url)
+        UIApplication.shared.open(url)*/
+        let alert = UIAlertController(title: "ChooseNumberTitle".localized, message: "ChooseNumberMsg".localized, preferredStyle: .alert)
+        
+        for number in numbers{
+            print(number)
+            if let url = URL(string: "telprompt://\(number)"){
+                   
+                   if UIApplication.shared.canOpenURL(url) {
+                       let numberAction = UIAlertAction(title: number , style: .default, handler: { _ in
+                            UIApplication.shared.open(url)
+                        
+                       })
+                       alert.addAction(numberAction)
+                }
+            }
+        }
+       
+        if alert.actions.count == 0 {
+            alert.title = "NoNumbers".localized
+            alert.message = ""
+            alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
+        } else {
+            alert.addAction(UIAlertAction(title: "Cancel".localized, style: .destructive, handler: nil))
+        }
+        self.present(alert, animated: true, completion: nil)
     }
     
      // MARK: - RestaurantViewControllerProtocol

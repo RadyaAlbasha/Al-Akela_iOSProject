@@ -27,3 +27,9 @@
 "Shrimpy" = "Shrimpy";
 "Syrian" = "Syrian";
 "min" = "min";
+"Healthy" = "Healthy";
+"ChooseNumberTitle" = "Choose a number to call";
+"ChooseNumberMsg" = "Please choose which number you want to call";
+"NoNumbers" = "No numbers to call";
+"OK" = "OK";
+"Cancel" = "Cancel";

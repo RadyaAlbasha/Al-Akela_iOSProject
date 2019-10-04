@@ -30,11 +30,11 @@ class NetworkAccessClass: NetworkAccessProtocol {
     }
     
     
-    func getAdsUri(){
+    func getAdsUri(collection : String){
         print("\ngetads\n")
         let db = Firestore.firestore()
         var adUris : [String]!
-        db.collection(FirestoreKeys.Collection_Ads).getDocuments { [weak self](snapshot, error) in
+        db.collection(collection).getDocuments { [weak self](snapshot, error) in
             if error != nil{
                 print("Error")
             }else{
@@ -49,7 +49,10 @@ class NetworkAccessClass: NetworkAccessProtocol {
                     }
                 }
             }
-            self?.typeOfFoodPresenter?.setAdUris(adUris: adUris)
+             if(collection == FirestoreKeys.Collection_Ads){
+                           self?.typeOfFoodPresenter?.setAdUris(adUris: adUris)}
+                       else{
+                           self?.restaurantsPresenter?.setAdUris(adUris: adUris)}
         }
     }
     

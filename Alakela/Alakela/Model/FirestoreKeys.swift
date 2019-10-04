@@ -9,9 +9,11 @@
 import Foundation
 struct FirestoreKeys {
     static let Collection_Ads = "Ads"
+    static let Collection_Ads2 = "Ads2"
     static let Collection_Barbecue = "Barbecue"
     static let Collection_Chicken = "Chicken"
     static let Collection_Dessert = "Dessert"
+    static let Collection_Healthy = "Healthy"
     static let Collection_Ice = "Ice"
     static let Collection_Koushari = "Koushari"
     static let Collection_Market = "Market"

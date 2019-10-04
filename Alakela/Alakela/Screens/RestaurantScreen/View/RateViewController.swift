@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+@available(iOS 13.0, *)
 class RateViewController: UIViewController {
 
     @IBOutlet weak var rateV: CosmosView!

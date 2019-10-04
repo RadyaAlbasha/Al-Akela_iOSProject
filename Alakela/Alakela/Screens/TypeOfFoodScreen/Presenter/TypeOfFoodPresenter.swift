@@ -26,7 +26,7 @@ class TypeOfFoodPresenter: TypeOfFoodPresenterProtocol {
         self.TypeOfFoodDelegate = delegate
     }
     func showAdsImages() {
-        self.networkDelegate?.getAdsUri()
+        self.networkDelegate?.getAdsUri(collection: FirestoreKeys.Collection_Ads)
     }
     
     func setAdUris(adUris: [String]!) {

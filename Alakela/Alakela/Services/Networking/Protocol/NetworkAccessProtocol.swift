@@ -9,7 +9,7 @@
 import Foundation
 protocol NetworkAccessProtocol {
     func setTypeOfFoodPresenterDelegate(TypeOfFoodPresenterDelegete : TypeOfFoodPresenterProtocol)
-    func getAdsUri()
+    func getAdsUri(collection : String)
     //
     func setRestaurantsPresenterDelegate(RestaurantsPresenterDelegete: RestaurantsPresenterProtocol)
      func getRestaurants(collectionKey : String)

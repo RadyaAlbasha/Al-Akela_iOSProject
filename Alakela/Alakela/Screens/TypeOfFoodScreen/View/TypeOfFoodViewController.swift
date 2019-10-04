@@ -11,6 +11,7 @@ import MOLH
 import GoogleMobileAds
 import ImageSlideshow
 
+@available(iOS 13.0, *)
 class TypeOfFoodViewController: UIViewController{
    
     @IBOutlet weak var typeTV: UITableView!
@@ -24,7 +25,7 @@ class TypeOfFoodViewController: UIViewController{
     var  networkIndicator : UIActivityIndicatorView!
     
     let localSource = [BundleImageSource(imageString: "akela")]
-    let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market]//array of string
+    let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Healthy,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market]//array of string
     var typeOfFoodPresenter : TypeOfFoodPresenterProtocol = TypeOfFoodPresenter()
     //var docRef: DocumentRefrence!
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class TypeOfFoodViewController: UIViewController{
         //typeTV.delegate = self
         //typeTV.dataSource = self
         
+        //show networkIndicator
         networkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideshow.subviews[0])
         
         typeOfFoodPresenter.setDelegate(delegate: self)
@@ -47,7 +49,7 @@ class TypeOfFoodViewController: UIViewController{
         
         languageButton.setTitle("LanguageButton".localized, for: .normal)
         
-        // Do any additional setup after loading the view.
+        // setup imageSlideshow
         adSlideshow.slideshowInterval = 3.0
         adSlideshow.contentScaleMode = UIViewContentMode.scaleToFill
         

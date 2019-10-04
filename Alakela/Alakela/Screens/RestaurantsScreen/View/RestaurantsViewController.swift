@@ -8,31 +8,47 @@
 
 import UIKit
 import GoogleMobileAds
+import ImageSlideshow
 
+@available(iOS 13.0, *)
 class RestaurantsViewController: UIViewController {
 
     @IBOutlet weak var restaurantsTV: UITableView!
     @IBOutlet weak var adBannerView: GADBannerView!
     
-    @IBOutlet weak var typeImgV: UIImageView!
+    @IBOutlet weak var adSlideShow: ImageSlideshow!
+    
     var  restaurantsPresenter :  RestaurantsPresenterProtocol =  RestaurantsPresenter()
     var restaurantsDict: [String: Restaurant] = [:]
     var  networkIndicator : UIActivityIndicatorView!
+     var  adNetworkIndicator : UIActivityIndicatorView!
     var collectionKey : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         restaurantsPresenter.setDelegate(delegate: self)
         
         // Do any additional setup after loading the view.
+        //make view rounded
         UIMethodsClass.roundedView(rView: restaurantsTV, radius: 5)
-        UIMethodsClass.roundedView(rView: typeImgV, radius: 5)
+        UIMethodsClass.roundedView(rView: adSlideShow, radius: 5)
         
         //load banner biew ads
         UIMethodsClass.loadAdBannerView(adBannerView: adBannerView, rootViewController: self)
         
+         //show networkIndicator
         networkIndicator = UIMethodsClass.showNetworkIndicator(view: self.view)
+        adNetworkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideShow.subviews[0])
         restaurantsPresenter.getRestaurants(collectionKey: collectionKey!)
+        
+        // setup imageSlideshow
+        adSlideShow.slideshowInterval = 3.0
+        adSlideShow.contentScaleMode = UIViewContentMode.scaleToFill
+               
+        adSlideShow.pageIndicator = nil
+        // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
+        //show ads slideshow
+        restaurantsPresenter.showAdsImages()
     }
     
     override func viewWillAppear(_ animated: Bool) {

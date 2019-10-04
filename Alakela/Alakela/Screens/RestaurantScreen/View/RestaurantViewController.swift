@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import MapKit
 
+@available(iOS 13.0, *)
 class RestaurantViewController: UIViewController {
 
     @IBOutlet weak var rateView: UIView!
@@ -35,13 +36,15 @@ class RestaurantViewController: UIViewController {
     @IBOutlet weak var detailsView: UIView!
     
     var restaurant : Restaurant!
-    
+    var menuViewController: MenuViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         UIMethodsClass.roundedView(rView: restaurantImgV, radius: 5)
         UIMethodsClass.roundedView(rView: detailsView, radius: 5)
+        
+        //segment.tintColor = CustomColor.orange700
         
         //load banner biew ads
         UIMethodsClass.loadAdBannerView(adBannerView: adBannerView, rootViewController: self)
@@ -49,6 +52,9 @@ class RestaurantViewController: UIViewController {
        //start by selecting menu
         //segment.selectedSegmentIndex = 0
         rateView.alpha = 0
+        
+        //change segment selected TextColor
+        segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: CustomColor.orange800], for: UIControl.State.selected)
     //
         UIMethodsClass.roundedView(rView: restaurantImgV, radius: CGFloat(restaurantImgV.frame.width / 2))
         locationLabel.adjustsFontSizeToFitWidth = true
@@ -94,9 +100,7 @@ class RestaurantViewController: UIViewController {
     
     @IBAction func call(_ sender: UIButton) {
         print("call")
-        let str:String!
-        str = "12345678"
-        makePhoneCall(number: str)
+        choosePhoneNumberToCall(numbers: restaurant.numbers)
     }
     
     @IBAction func showLocation(_ sender: UIButton) {
@@ -116,15 +120,22 @@ class RestaurantViewController: UIViewController {
         mapItem.openInMaps(launchOptions: options)
         
     }
-    /*
+
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "menuViewSegue" {
+                   menuViewController = segue.destination as? MenuViewController
+                   menuViewController?.restaurant = restaurant
+                  // menuViewController!.containerToMaster = self
+               }
     }
-    */
+    
 
 }
 

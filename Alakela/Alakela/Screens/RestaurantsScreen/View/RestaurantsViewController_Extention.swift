@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import SDWebImage
+import ImageSlideshow
+
+@available(iOS 13.0, *)
 extension RestaurantsViewController: RestaurantsViewControllerProtocol, UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,4 +47,20 @@ extension RestaurantsViewController: RestaurantsViewControllerProtocol, UITableV
         self.collectionKey = collectionKey
     }
     
+    func showAdImages(adUris: [String]!) {
+        if adUris != nil{
+            var sdWebImageSource = [SDWebImageSource]()
+            for uri in (adUris)!{
+                
+                    sdWebImageSource.append(SDWebImageSource(urlString: uri)!)//download images
+                }
+                adSlideShow.setImageInputs(sdWebImageSource)//show images
+        }
+        else{
+            let localSource = [BundleImageSource(imageString: collectionKey!)]
+            adSlideShow.setImageInputs(localSource)//show default image
+        }
+        
+        adNetworkIndicator.stopAnimating()
+    }
 }

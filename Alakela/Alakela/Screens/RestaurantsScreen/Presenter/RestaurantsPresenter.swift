@@ -34,6 +34,10 @@ class RestaurantsPresenter: RestaurantsPresenterProtocol {
     func setRestaurants(restaurantsDict: [String : Restaurant]) {
         restaurantsDelegate?.showRestaurants(restaurantsDict: restaurantsDict)
     }
-    
-    
+    func showAdsImages() {
+        self.networkDelegate?.getAdsUri(collection: FirestoreKeys.Collection_Ads2)
+    }
+    func setAdUris(adUris: [String]!) {
+        restaurantsDelegate?.showAdImages(adUris: adUris)
+    }
 }

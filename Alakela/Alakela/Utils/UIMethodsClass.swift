@@ -9,7 +9,9 @@
 import UIKit
 import GoogleMobileAds
 
+@available(iOS 13.0, *)
 class UIMethodsClass {
+   
     static func roundedView (rView : AnyObject , radius : CGFloat){
         rView.layer.cornerRadius = radius
         rView.layer.masksToBounds = true
@@ -29,9 +31,10 @@ class UIMethodsClass {
         adBannerView.load(adRequest)
         //adBannerView.load(GADRequest())
     }
+  
     static func showNetworkIndicator(view : UIView) -> UIActivityIndicatorView
     {
-        let networkIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+        let networkIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
         networkIndicator.color = CustomColor.orange800
         networkIndicator.center = view.center
         networkIndicator.startAnimating()
