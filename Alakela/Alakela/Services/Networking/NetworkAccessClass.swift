@@ -14,6 +14,8 @@ class NetworkAccessClass: NetworkAccessProtocol {
     
     var typeOfFoodPresenter : TypeOfFoodPresenterProtocol?
     var restaurantsPresenter : RestaurantsPresenterProtocol?
+    var restaurantPresenter : RestaurantPresenterProtocol?
+    //let db = Firestore.firestore()
     
     init() {
         
@@ -29,6 +31,9 @@ class NetworkAccessClass: NetworkAccessProtocol {
          self.restaurantsPresenter = RestaurantsPresenterDelegete
     }
     
+    func setRestaurantPresenterDelegate(restaurantPresenterDelegete:  RestaurantPresenterProtocol){
+        self.restaurantPresenter = restaurantPresenterDelegete
+    }
     
     func getAdsUri(collection : String){
         print("\ngetads\n")
@@ -91,5 +96,11 @@ class NetworkAccessClass: NetworkAccessProtocol {
             self?.restaurantsPresenter?.setRestaurants(restaurantsDict: restaurantsDict)
            // self?.typeOfFoodPresenter?.setAdUris(adUris: adUris)
         }
+    }
+    
+    
+    func updateField(collectionKey : String ,documentKey : String, fieldKey : String, newData: String){
+        let db = Firestore.firestore()
+        db.collection(collectionKey).document(documentKey).updateData([fieldKey : newData])
     }
 }

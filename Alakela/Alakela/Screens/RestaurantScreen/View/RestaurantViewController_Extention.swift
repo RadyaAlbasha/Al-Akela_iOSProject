@@ -61,6 +61,9 @@ extension RestaurantViewController: RestaurantViewControllerProtocol ,GADBannerV
     func setRestaurant(restaurant: Restaurant!) {
         self.restaurant = restaurant
     }
+    func setCollectionKey(collectionKey : String!){
+        self.collectionKey = collectionKey
+    }
     //
     func showRestaurantDetails(restaurant: Restaurant){
         if let url = restaurant.logoUri {

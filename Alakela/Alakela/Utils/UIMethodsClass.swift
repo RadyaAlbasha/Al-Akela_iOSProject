@@ -23,13 +23,14 @@ class UIMethodsClass {
     }
     static func loadAdBannerView(adBannerView: GADBannerView! , rootViewController : UIViewController){
         //load banner biew ads
-        let adRequest = GADRequest()
-        adRequest.testDevices = [kGADSimulatorID] // Sample device ID
+        //let adRequest = GADRequest()
+        //adRequest.testDevices = [(kGADSimulatorID as! String)] // Sample device ID
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [(kGADSimulatorID as! String)] // Sample device ID
         
         adBannerView.adUnitID = Constants.AD_UNIT_ID
         adBannerView.rootViewController = rootViewController
-        adBannerView.load(adRequest)
-        //adBannerView.load(GADRequest())
+        //adBannerView.load(adRequest)
+        adBannerView.load(GADRequest())
     }
   
     static func showNetworkIndicator(view : UIView) -> UIActivityIndicatorView

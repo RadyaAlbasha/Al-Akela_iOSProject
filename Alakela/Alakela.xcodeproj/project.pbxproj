@@ -26,6 +26,8 @@
 		113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 113A62B52334143100401E89 /* Alakela.xcdatamodeld */; };
 		113A62B92334143100401E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113A62B82334143100401E89 /* Assets.xcassets */; };
 		113A62BC2334143100401E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113A62BA2334143100401E89 /* LaunchScreen.storyboard */; };
+		1187A56F234BB78E00910ADE /* RestaurantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187A56E234BB78E00910ADE /* RestaurantPresenter.swift */; };
+		1187A571234BB7BD00910ADE /* RestaurantPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187A570234BB7BD00910ADE /* RestaurantPresenterProtocol.swift */; };
 		118D74252338F5BB00AF54B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118D74272338F5BB00AF54B1 /* Localizable.strings */; };
 		118D742A2338FB7300AF54B1 /* String-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D74292338FB7300AF54B1 /* String-Extention.swift */; };
 		11A697CB233AB2030071E239 /* TypeOfFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A697CA233AB2030071E239 /* TypeOfFoodPresenter.swift */; };
@@ -65,6 +67,8 @@
 		113A62B82334143100401E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113A62BB2334143100401E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113A62BD2334143100401E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1187A56E234BB78E00910ADE /* RestaurantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPresenter.swift; sourceTree = "<group>"; };
+		1187A570234BB7BD00910ADE /* RestaurantPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPresenterProtocol.swift; sourceTree = "<group>"; };
 		118D74212338F35C00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		118D74222338F35C00AF54B1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		118D74262338F5BB00AF54B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		11B4F6CD2336681E0074A3B9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1187A56E234BB78E00910ADE /* RestaurantPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				11E5F1A2233E828500CB82C0 /* RestaurantViewControllerProtocol.swift */,
+				1187A570234BB7BD00910ADE /* RestaurantPresenterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				11E5F19F233E4C4400CB82C0 /* RestaurantsPresenterProtocol.swift in Sources */,
 				11362B7923342F51000BA439 /* TypeOfFoodTableViewCell.swift in Sources */,
 				11B4F6D12336686A0074A3B9 /* RestaurantViewController.swift in Sources */,
+				1187A571234BB7BD00910ADE /* RestaurantPresenterProtocol.swift in Sources */,
 				113A62B72334143100401E89 /* Alakela.xcdatamodeld in Sources */,
 				11A697CB233AB2030071E239 /* TypeOfFoodPresenter.swift in Sources */,
 				112F0DAD23367B5F0054FBEE /* MenuViewController.swift in Sources */,
@@ -472,6 +479,7 @@
 				11E5F1A5233E82E800CB82C0 /* RestaurantViewController_Extention.swift in Sources */,
 				11AD66D0233A7D060092779A /* FirestoreKeys.swift in Sources */,
 				11362B8B23344221000BA439 /* RestaurantsViewController_Extention.swift in Sources */,
+				1187A56F234BB78E00910ADE /* RestaurantPresenter.swift in Sources */,
 				11A697CD233AB2440071E239 /* TypeOfFoodPresenterProtocol.swift in Sources */,
 				11E5F19D233E4C2B00CB82C0 /* RestaurantsPresenter.swift in Sources */,
 				113A62B12334143100401E89 /* TypeOfFoodViewController.swift in Sources */,

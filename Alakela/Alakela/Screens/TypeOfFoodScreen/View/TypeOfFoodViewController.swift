@@ -25,7 +25,7 @@ class TypeOfFoodViewController: UIViewController{
     var  networkIndicator : UIActivityIndicatorView!
     
     let localSource = [BundleImageSource(imageString: "akela")]
-    let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Healthy,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market]//array of string
+    let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Burger,FirestoreKeys.Collection_Healthy,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_HomeFood,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market,FirestoreKeys.Collection_Delivery]//array of string
     var typeOfFoodPresenter : TypeOfFoodPresenterProtocol = TypeOfFoodPresenter()
     //var docRef: DocumentRefrence!
     override func viewDidLoad() {

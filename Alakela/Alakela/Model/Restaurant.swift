@@ -19,5 +19,5 @@ struct Restaurant {
     let ownerPhone : String!
     let rate : String!
     let timeDelivery : String!
-    let view : String!
+    var view : String!
 }

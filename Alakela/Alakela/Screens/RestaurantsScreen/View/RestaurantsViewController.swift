@@ -68,7 +68,13 @@ class RestaurantsViewController: UIViewController {
         let key = Array(restaurantsDict.keys.sorted())[(self.restaurantsTV?.indexPath(for: sender as! UITableViewCell)?.row)!]
         // Pass the selected object to the new view controller.
         restaurantDelegate.setRestaurant(restaurant: restaurantsDict[key])
+        restaurantDelegate.setCollectionKey(collectionKey: collectionKey)
      
     }
+    
+    /*@IBAction func didUnwindFromRestaurantVC(_ sender : UIStoryboardSegue){
+        guard let restaurantVC = sender.source as? RestaurantViewController else {return}
+        restaurantsDict[restaurantVC.restaurant.name] = restaurantVC.restaurant
+    }*/
 
 }

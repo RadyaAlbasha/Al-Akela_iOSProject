@@ -12,5 +12,8 @@ protocol NetworkAccessProtocol {
     func getAdsUri(collection : String)
     //
     func setRestaurantsPresenterDelegate(RestaurantsPresenterDelegete: RestaurantsPresenterProtocol)
-     func getRestaurants(collectionKey : String)
+    func getRestaurants(collectionKey : String)
+    //
+    func setRestaurantPresenterDelegate(restaurantPresenterDelegete:  RestaurantPresenterProtocol)
+    func updateField(collectionKey : String ,documentKey : String, fieldKey : String, newData: String)
 }

@@ -28,6 +28,9 @@
 "Syrian" = "Syrian";
 "min" = "min";
 "Healthy" = "Healthy";
+"Home food" = "Home food";
+"Burger" = "Burger";
+"Delivery" = "Delivery";
 "ChooseNumberTitle" = "Choose a number to call";
 "ChooseNumberMsg" = "Please choose which number you want to call";
 "NoNumbers" = "No numbers to call";

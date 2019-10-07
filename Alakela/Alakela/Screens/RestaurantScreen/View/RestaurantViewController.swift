@@ -35,10 +35,14 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var detailsView: UIView!
     
+    var restaurantPresenter : RestaurantPresenterProtocol = RestaurantPresenter()
+    var collectionKey : String!
     var restaurant : Restaurant!
     var menuViewController: MenuViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        restaurantPresenter.setDelegate(delegate: self)
         
         // Do any additional setup after loading the view.
         UIMethodsClass.roundedView(rView: restaurantImgV, radius: 5)
@@ -69,7 +73,14 @@ class RestaurantViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if restaurant != nil{
             self.title = restaurant.name
+            if restaurant.view != nil{
+                let view = "\(Int(restaurant.view)!+1)"
+                restaurant.view = view
+                restaurantPresenter.updateField(collectionKey: collectionKey, documentKey: restaurant.name, fieldKey: FirestoreKeys.Field_view , newData: view)
+            }
+            
             showRestaurantDetails(restaurant: restaurant)
+            
         }
     }
     

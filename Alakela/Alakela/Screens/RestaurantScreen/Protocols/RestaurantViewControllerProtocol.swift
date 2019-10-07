@@ -10,5 +10,6 @@ import Foundation
 protocol RestaurantViewControllerProtocol {
     
     func setRestaurant(restaurant : Restaurant!)
+    func setCollectionKey(collectionKey : String!)
 }
 

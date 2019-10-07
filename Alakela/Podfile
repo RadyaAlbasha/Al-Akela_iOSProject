@@ -9,7 +9,7 @@ target 'Alakela' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Cosmos', '~> 19.0'
-pod 'ImageSlideshow', '~> 1.8.0'
+pod 'ImageSlideshow', '~> 1.8.1'
 pod 'ImageSlideshow/SDWebImage'
 pod 'Google-Mobile-Ads-SDK'
 pod 'MOLH'
