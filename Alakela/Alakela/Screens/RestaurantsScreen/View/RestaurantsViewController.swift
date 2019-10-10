@@ -21,7 +21,6 @@ class RestaurantsViewController: UIViewController {
     var  restaurantsPresenter :  RestaurantsPresenterProtocol =  RestaurantsPresenter()
     var restaurantsDict: [String: Restaurant] = [:]
     var  networkIndicator : UIActivityIndicatorView!
-     var  adNetworkIndicator : UIActivityIndicatorView!
     var collectionKey : String!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,8 @@ class RestaurantsViewController: UIViewController {
         
          //show networkIndicator
         networkIndicator = UIMethodsClass.showNetworkIndicator(view: self.view)
-        adNetworkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideShow.subviews[0])
+        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
+        adSlideShow.activityIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideShow.subviews[0]) as? ActivityIndicatorFactory
         restaurantsPresenter.getRestaurants(collectionKey: collectionKey!)
         
         // setup imageSlideshow

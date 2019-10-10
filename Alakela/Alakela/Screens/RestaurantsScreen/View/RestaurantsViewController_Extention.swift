@@ -60,7 +60,5 @@ extension RestaurantsViewController: RestaurantsViewControllerProtocol, UITableV
             let localSource = [BundleImageSource(imageString: collectionKey!)]
             adSlideShow.setImageInputs(localSource)//show default image
         }
-        
-        adNetworkIndicator.stopAnimating()
     }
 }

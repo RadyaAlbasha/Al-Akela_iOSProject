@@ -43,7 +43,7 @@ extension TypeOfFoodViewController: TypeOfFoodViewControllerProtocol,UITableView
             adSlideshow.setImageInputs(localSource)//show default image
         }
         
-        networkIndicator.stopAnimating()
+        //networkIndicator.stopAnimating()
     }
     
     /*

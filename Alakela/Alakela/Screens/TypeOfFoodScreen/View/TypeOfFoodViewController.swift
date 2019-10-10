@@ -22,7 +22,7 @@ class TypeOfFoodViewController: UIViewController{
     
     @IBOutlet weak var adSlideshow: ImageSlideshow!
     
-    var  networkIndicator : UIActivityIndicatorView!
+    //var  networkIndicator : UIActivityIndicatorView!
     
     let localSource = [BundleImageSource(imageString: "akela")]
     let typeOfFood = [FirestoreKeys.Collection_Pizza,FirestoreKeys.Collection_Shrimpy,FirestoreKeys.Collection_Chicken,FirestoreKeys.Collection_Barbecue,FirestoreKeys.Collection_Burger,FirestoreKeys.Collection_Healthy,FirestoreKeys.Collection_Syrian,FirestoreKeys.Collection_Koushari,FirestoreKeys.Collection_Ice,FirestoreKeys.Collection_HomeFood,FirestoreKeys.Collection_Dessert,FirestoreKeys.Collection_Market,FirestoreKeys.Collection_Delivery]//array of string
@@ -36,8 +36,11 @@ class TypeOfFoodViewController: UIViewController{
         //typeTV.dataSource = self
         
         //show networkIndicator
-        networkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideshow.subviews[0])
+        //networkIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideshow.subviews[0])
+        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
+        adSlideshow.activityIndicator = UIMethodsClass.showNetworkIndicator(view: adSlideshow.subviews[0]) as? ActivityIndicatorFactory
         
+        //
         typeOfFoodPresenter.setDelegate(delegate: self)
         
         //make view rounded

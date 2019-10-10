@@ -12,14 +12,14 @@ import ImageSlideshow
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var slideshow: ImageSlideshow!
-    let localSource = [BundleImageSource(imageString: "img1"), BundleImageSource(imageString: "img2"), BundleImageSource(imageString: "img3"), BundleImageSource(imageString: "img4")]
+   // let localSource = [BundleImageSource(imageString: "img1"), BundleImageSource(imageString: "img2"), BundleImageSource(imageString: "img3"), BundleImageSource(imageString: "img4")]
     var restaurant : Restaurant!
-    //var  networkIndicator : UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         UIMethodsClass.roundedView(rView: slideshow.subviews[0], radius: 5)
+        UIMethodsClass.roundedView(rView: slideshow, radius: 5)
         
         slideshow.slideshowInterval = 5.0
         slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
@@ -31,16 +31,15 @@ class MenuViewController: UIViewController {
         slideshow.pageIndicator = pageControl
         
         // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
-        slideshow.activityIndicator = DefaultActivityIndicator()
+        slideshow.activityIndicator = UIMethodsClass.showNetworkIndicator(view: slideshow.subviews[0]) as? ActivityIndicatorFactory
         slideshow.delegate = self
         
         // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-        slideshow.setImageInputs(localSource)
+        //slideshow.setImageInputs(localSource)
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.didTap))
         slideshow.addGestureRecognizer(recognizer)
         
-        //networkIndicator = UIMethodsClass.showNetworkIndicator(view: slideshow.subviews[0])
         showMenuImages(menuUri: restaurant.menuUri)
     }
     @available(iOS 13.0, *)
@@ -75,9 +74,15 @@ extension MenuViewController: ImageSlideshowDelegate {
                 var sdWebImageSource = [SDWebImageSource]()
                 for uri in (menuUri)!{
                     
-                        sdWebImageSource.append(SDWebImageSource(urlString: uri)!)//download images
+                    if let img = SDWebImageSource(urlString: uri){//download images
+                        sdWebImageSource.append(img)
                     }
+                }
                 slideshow.setImageInputs(sdWebImageSource)//show images
+            }else{
+                let localSource = [BundleImageSource(imageString: "akela")]
+                slideshow.setImageInputs(localSource)
             }
+            
         }
 }
